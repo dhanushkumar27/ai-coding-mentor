@@ -1,25 +1,11 @@
-const buildAnalysisPrompt = ({ input, language }) => `
-You are an expert software engineer.
+const { buildPrompt } = require("./builders/analysis.builder");
 
-Analyze the following ${language} code.
-
-Return ONLY valid JSON.
-
-{
-  "optimizedCode":"",
-  "notes":"",
-  "suggestions":[
-    {
-      "heading":"",
-      "content":""
-    }
-  ]
-}
-
-Code:
-
-${input}
-`;
+const buildAnalysisPrompt = ({ input, language }) => {
+  return buildPrompt({
+    input,
+    language,
+  });
+};
 
 module.exports = {
   buildAnalysisPrompt,

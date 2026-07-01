@@ -1,12 +1,15 @@
-const parseAnalysis = (response) => {
-  const cleaned = response
-    .replace(/```json/g, "")
-    .replace(/```/g, "")
-    .trim();
+const { sanitizeResponse } = require("../sanitizers/response.sanitizer");
 
-  return JSON.parse(cleaned);
+const parseAnalysisResponse = (response) => {
+  try {
+    const cleaned = sanitizeResponse(response);
+
+    return JSON.parse(cleaned);
+  } catch (error) {
+    throw new Error("Failed to parse AI response.");
+  }
 };
 
 module.exports = {
-  parseAnalysis,
+  parseAnalysisResponse,
 };

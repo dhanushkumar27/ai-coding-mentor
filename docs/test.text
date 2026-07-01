@@ -1,0 +1,33 @@
+🧪 Test 1 – Simple JavaScript Function
+
+Use this request:
+
+{
+  "language": "javascript",
+  "input": "function add(a, b) { return a + b; }"
+}
+
+Check:
+
+✅ Is the JSON valid?
+✅ Does it return all sections?
+✅ Is optimizedCode meaningful?
+✅ Are bugs.count and suggestions.count correct?
+✅ Is learning relevant?
+🧪 Test 2 – DSA Problem Statement
+{
+  "language": "text",
+  "input": "Given an array of integers, return the maximum sum of any contiguous subarray."
+}
+
+Check:
+
+Does it identify the problem?
+Does it recommend concepts like Arrays and Kadane's Algorithm?
+Are the recommended problems relevant?
+Is the roadmap sensible?
+🧪 Test 3 – Runtime Error
+{
+  "language": "javascript",
+  "input": "TypeError: Cannot read properties of undefined (reading 'map')"
+}

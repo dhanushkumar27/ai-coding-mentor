@@ -1,7 +1,9 @@
 *{
   border:1px solid blue;
+  margin:5px;
 }
 body{
   margin:0px;
   padding:0px;
+  box-sizing:border-box;
 }
